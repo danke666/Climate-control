@@ -9,3 +9,16 @@ for day, t in temperatures.items():
     results[day] = final_t
     actions[day] = action
     print("---")
+
+# Вывод итоговой таблицы
+print("\nИтоговая табилца:")
+print(
+    "| День          | Исходная t (°С) | Коррекция                  | Итоговая t (°С) |"
+)
+print(
+    "|---------------|-----------------|----------------------------|-----------------|"
+)
+for day, initian_t in temperatures.items():
+    final_t = results[day]
+    action = actions[day]
+    print(f"| {day:<13} | {initian_t:^15} | {action:<26} | {final_t:^15} |")
